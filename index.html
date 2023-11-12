@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="mediaqueries.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-   <!-- Navbar Started -->
-   <div id="side_menu" >
+    <!-- Navbar Started -->
+    <div id="side_menu">
         <div class="navbar flex">
             <div class="login flex">
                 <div class="login_baba_logo">
@@ -22,13 +24,15 @@
                 <i id="menu_close_btn" class="ri-menu-3-line"></i>
             </div>
         </div>
-        <button class="side_menu_button"><p>Car Rental</p></button>
+        <button class="side_menu_button">
+            <p>Car Rental</p>
+        </button>
         <button class="side_menu_button">Car Subscription</button>
         <button class="side_menu_button">FAQ</button>
         <button class="side_menu_button">Policy - Car Rental</button>
-   </div>
-   <div class="balancemargin"></div>
-   <div id="nav">
+    </div>
+    <div class="balancemargin"></div>
+    <div id="nav">
         <div class="container flex">
             <div class="menu">
                 <i id="menu_btn" class="ri-menu-line"></i>
@@ -47,33 +51,60 @@
                 </div>
             </div>
         </div>
-   </div>
-   <!-- Navbar Ended -->
-   <div id="slider">
-    <div id="slider_images" class="flex">
-        <img class="parent_img" src="./Assets/ST_LT_BG_2.png" alt="">
-        <img class="parent_img" src="./Assets/ST_LT_BG_3 (1).png" alt="">
-        <img class="child_img1 child_img" src="./Assets/asset 7.png" alt="">
-        <img class="child_img2 child_img" src="./Assets/asset 8.png" alt="">
     </div>
-    <div id="rental_box">
-        <div class="header flex">
-            <div class="rental">
-                <h3>Rentals</h3>
-                <p>For hours & days</p>
+    <!-- Navbar Ended -->
+    <div id="slider">
+        <div id="slider_images" class="flex">
+            <img class="parent_img" src="./Assets/ST_LT_BG_2.png" alt="">
+            <img class="parent_img" src="./Assets/ST_LT_BG_3 (1).png" alt="">
+            <img class="child_img1 child_img" src="./Assets/asset 7.png" alt="">
+            <img class="child_img2 child_img" src="./Assets/asset 8.png" alt="">
+        </div>
+        <div id="rental_box">
+            <div class="header flex">
+                <div class="rental active">
+                    <div class="down_arrow"></div>
+                    <h3>Rentals</h3>
+                    <p>For hours & days</p>
+                </div>
+                <div class="subscriptions">
+                    <div class="down_arrow"></div>
+                    <h3>Subscription</h3>
+                    <p>For more than 1 month</p>
+                </div>
             </div>
-            <div class="subscriptions">
-                <h3>Subscription</h3>
-                <p>For more than 1 month</p>
+            <div class="rental_logo">
+                <img src="./Assets/asset 9.svg" alt="">
+                <p>Car Rental in Bhubaneswar</p>
+            </div>
+            <div class="selection_box">
+                <div class="select">
+                    <select id="city" name="city">
+                        <option value="volvo">Mumbai</option>
+                        <option value="saab">Pune</option>
+                        <option value="mercedes">Sangli</option>
+                        <option value="audi">Satara</option>
+                    </select>
+                </div>
+                <div class="calendor flex">
+                    <div class="start_data">
+                        <!-- <label for="eventDate">Select a date:</label> -->
+                        <input type="date" id="eventDate" name="eventDate">
+                    </div>
+                    <div class="end_data">
+                        <input type="datetime-local">
+                    </div>
+                </div>
+            </div>
+            <div class="search_btn flex br">
+                <button>Search</button>
             </div>
         </div>
-        
+        <div id="slide_btns">
+            <button class="btn1"></button>
+            <button class="btn2"></button>
+        </div>
     </div>
-    <div id="slide_btns">
-        <button class="btn1"></button>
-        <button class="btn2"></button>
-    </div>
-   </div>
 
 
 
@@ -82,8 +113,8 @@
 
 
 
-   <!-- Featured Section -->
-   <div id="featured">
+    <!-- Featured Section -->
+    <div id="featured">
         <div class="container">
             <div class="controls flex">
                 <div class="heading ">
@@ -94,39 +125,42 @@
                     <i id="feature_right" class="ri-arrow-right-s-line"></i>
                 </div>
             </div>
-                <div class="slider">
-                    <div class="featuressection flex">
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_01-min.jpg" alt="">
-                        </div>
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_02-min.jpg" alt="">
-                        </div>
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_03-min.jpg" alt="">
-                        </div>
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_01-min.jpg" alt="">
-                        </div>
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_02-min.jpg" alt="">
-                        </div>
-                        <div class="feature_card">
-                            <img src="./Assets/subscriptions_banners_03-min.jpg" alt="">
-                        </div>
+            <div class="slider">
+                <div class="featuressection flex">
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_01-min.jpg" alt="">
+                    </div>
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_02-min.jpg" alt="">
+                    </div>
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_03-min.jpg" alt="">
+                    </div>
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_01-min.jpg" alt="">
+                    </div>
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_02-min.jpg" alt="">
+                    </div>
+                    <div class="feature_card">
+                        <img src="./Assets/subscriptions_banners_03-min.jpg" alt="">
                     </div>
                 </div>
+            </div>
         </div>
-   </div>
-   <!-- Featured Section -->
+    </div>
+    <!-- Featured Section -->
 
 
 
 
 
 
-   <div class="spacer"></div>
+    <div class="spacer"></div>
 </body>
+
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="index.js"></script>
