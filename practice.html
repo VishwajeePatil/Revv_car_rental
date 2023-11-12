@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #slider-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%; /* Set the width of your slider */
+      height: 70vh; /* Set the height of your slider */
+    }
+
+    #slider-images {
+      display: flex;
+
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #prev-btn,
+    #next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #prev-btn { left: 10px; }
+    #next-btn { right: 10px; }
+  </style>
+  <title>Image Slider</title>
+</head>
+<body>
+
+<div id="slider-container">
+  <div id="slider-images">
+    <img class="slider-image" src="./Assets/ST_LT_BG_3.png" alt="Image 1">
+    <img class="slider-image" src="./Assets/ST_LT_BG_2.png" alt="Image 2">
+  </div>
+  <button id="prev-btn" onclick="prevSlide()">Previous</button>
+  <button id="next-btn" onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+  const sliderImages = document.getElementById('slider-images');
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % 2;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + 2) % 2;
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const translateValue = -currentIndex * 100 + '%';
+    sliderImages.style.transform = 'translateX(' + translateValue + ')';
+  }
+</script>
+
+</body>
+</html>
