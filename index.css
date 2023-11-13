@@ -334,10 +334,8 @@ button{
 
 /* Main Slide */
 
-/* Featured Section */
-
 #featured{
-    height: 100vh;
+    height: 95vh;
     margin: auto;
     background-color: #f1f4f8;
 }
@@ -350,7 +348,7 @@ button{
 #featured .controls{
     width: 100%;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 40px 0 10px 0;
 }
 .controls i{
     color: black;
@@ -373,7 +371,7 @@ button{
     width: 370px;
     background-color: black;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 22px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .feature_card img{
@@ -383,6 +381,165 @@ button{
     object-fit:contain;
 
 }
-#feature_left{
-    opacity: 0.5;
+.slider::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+  }
+
+/* Offer Section */
+
+.slider2{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 }
+
+.slider2 .offer_section{
+    width: fit-content;
+    gap: 25px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.offer_card2{
+    width: 370px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.offer_card2 img{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider2::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+  }
+
+.btns .offer_left{
+    opacity: 0.5;
+}  
+
+/* Offer Section */
+
+
+/*why revv section*/
+.slider3{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.slider3 .why_rev_section{
+    width: fit-content;
+    gap: 25px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.black{
+    background-color: black !important;
+    border-radius: 25px;
+    padding-bottom: 8px;
+}
+.black {
+    width: 370px;
+    cursor: pointer;
+    
+}
+.why_revv_card2{
+    background-color: white;
+    background-color: #ffffff;
+    border-radius: 22px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.why_revv_card2 .why_rev_img img{
+    object-fit: contain;
+    height: 60px;
+    width: 60px;
+    margin:0 10px;
+}
+
+.why_revv_card2 h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.why_revv_card2 p{
+    font-size: 14px;
+    color: #122232B3;
+    font-weight: 500;
+}
+
+.why_revv_card2 .why_rev_info{
+    padding: 10px 0;
+}
+
+
+
+/*why revv section*/
+
+/*FAQ*/
+
+#faq{
+    height: 100vh;
+    margin: auto;
+    background-color: #f1f4f8;
+}
+
+.view .heading h2{
+    color: #98a6b3;
+    font-weight: 500;
+    font-size: 1.6em;
+}
+
+.view .heading a{
+    color: #0084ff;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.view{
+    justify-content: space-between;
+}
+
+#faq .container {
+    overflow: hidden;
+    object-fit: contain;
+    height: auto;
+    background-color: #ffff;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#faq .container .questions{
+    margin:20px 0 20px 0;
+}
+
+#faq .container .questions h3{
+    font-weight: 500;
+    font-size: 1em;
+    
+}
+#faq .container .questions p{
+    font-size: 0.7em;
+    color: #122232B3;
+}
+hr{
+    opacity: 0.2;
+    width: 140%;
+   margin-left: -100px;
+}
+/*FAQ*/

@@ -57,6 +57,55 @@ const automaticscrollslider = ()=>{
 }
 automaticscrollslider();
 
+
+
+// Offer Slider
+const second_slider = ()=>{
+    let y =0;
+    const scrollslider = (y)=>{
+        if(y<=-300){
+            let btn_right = document.getElementById("offer_right");
+            btn_right.style.opacity=0.5;
+        }
+        else{
+            let btn_right = document.getElementById("offer_right");
+            btn_right.style.opacity=1;
+        }
+        if(y>=0){
+            let btn_left = document.getElementById("offer_left");
+            btn_left.style.opacity=0.5;
+        }
+        else{
+            let btn_left = document.getElementById("offer_left");
+            btn_left.style.opacity=1;
+        }
+        gsap.to(".slider2 .offer_section",{
+            left:(y),
+            duration:1.2,
+
+        })
+    }
+    const manualscrollslide = ()=>{
+        document.getElementById("offer_right").addEventListener("click",()=>{
+            console.log("Second");
+            if(y>-300){
+                scrollslider(y-=395);
+            }
+        })
+        document.getElementById("offer_left").addEventListener("click",()=>{
+            if(y<0){
+                scrollslider(y+=395);
+            }
+        })
+    }
+    manualscrollslide()
+}
+second_slider();
+// Offer Slider
+
+
+
+
 // Main Slider
 const main_slider = ()=>{
     let pre_btn = document.querySelector("#slider #slide_btns > .btn1")
@@ -97,6 +146,9 @@ const main_slider = ()=>{
     },3000)
 }
 main_slider()
+
+
+
 const add_city = ()=>{
     const top50CitiesInIndia = [
         "Mumbai",
@@ -171,7 +223,7 @@ const rental_box_change = ()=>{
         rental_header.classList=null
         cale_box.style.display="none"
         select.style.borderRadius = "10px";
-        select.style.marginTop="50px"
+        select.style.marginTop="40px"
     })
     rental_header.addEventListener("click",()=>{
         rental_header.classList="active"
