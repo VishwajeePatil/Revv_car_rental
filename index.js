@@ -97,3 +97,88 @@ const main_slider = ()=>{
     },3000)
 }
 main_slider()
+const add_city = ()=>{
+    const top50CitiesInIndia = [
+        "Mumbai",
+        "Delhi",
+        "Bangalore",
+        "Hyderabad",
+        "Ahmedabad",
+        "Chennai",
+        "Kolkata",
+        "Surat",
+        "Pune",
+        "Jaipur",
+        "Lucknow",
+        "Kanpur",
+        "Nagpur",
+        "Indore",
+        "Thane",
+        "Bhopal",
+        "Visakhapatnam",
+        "Pimpri-Chinchwad",
+        "Patna",
+        "Vadodara",
+        "Ghaziabad",
+        "Ludhiana",
+        "Agra",
+        "Nashik",
+        "Faridabad",
+        "Meerut",
+        "Rajkot",
+        "Kalyan-Dombivali",
+        "Vasai-Virar",
+        "Varanasi",
+        "Srinagar",
+        "Aurangabad",
+        "Dhanbad",
+        "Amritsar",
+        "Navi Mumbai",
+        "Allahabad",
+        "Howrah",
+        "Ranchi",
+        "Gwalior",
+        "Jabalpur",
+        "Coimbatore",
+        "Vijayawada",
+        "Jodhpur",
+        "Madurai",
+        "Raipur",
+        "Chandigarh",
+        "Guntur",
+        "Guwahati"
+      ];
+      let select = document.querySelector("#select #city");
+      top50CitiesInIndia.map((item)=>{
+        let opt = document.createElement("option");
+        opt.value=item
+        opt.text=item
+        select.appendChild(opt)
+      })
+      
+}
+add_city();
+const rental_box_change = ()=>{
+    const change_rental_box = (flag)=>{
+
+    }
+    const subs_header = document.getElementById("subs_header")
+    const rental_header = document.getElementById("rental_header")
+    const cale_box = document.querySelector("#rental_box .selection_box .calendor")
+    const select = document.querySelector("#rental_box .selection_box select")
+    subs_header.addEventListener("click",()=>{
+        subs_header.classList="active"
+        rental_header.classList=null
+        cale_box.style.display="none"
+        select.style.borderRadius = "10px";
+        select.style.marginTop="50px"
+    })
+    rental_header.addEventListener("click",()=>{
+        rental_header.classList="active"
+        subs_header.classList=null
+        cale_box.style.display="flex"
+        select.style.borderRadius = "10px 10px 0 0";
+        select.style.marginTop="0"
+    })
+}
+rental_box_change();

@@ -62,12 +62,12 @@
         </div>
         <div id="rental_box">
             <div class="header flex">
-                <div class="rental active">
+                <div id="rental_header" class="active">
                     <div class="down_arrow"></div>
                     <h3>Rentals</h3>
                     <p>For hours & days</p>
                 </div>
-                <div class="subscriptions">
+                <div id="subs_header">
                     <div class="down_arrow"></div>
                     <h3>Subscription</h3>
                     <p>For more than 1 month</p>
@@ -78,22 +78,17 @@
                 <p>Car Rental in Bhubaneswar</p>
             </div>
             <div class="selection_box">
-                <div class="select">
+                <div id="select">
                     <select id="city" name="city">
-                        <option value="volvo">Mumbai</option>
-                        <option value="saab">Pune</option>
-                        <option value="mercedes">Sangli</option>
-                        <option value="audi">Satara</option>
                     </select>
                 </div>
                 <div class="calendor flex">
                     <div class="start_data">
-                        <!-- <label for="eventDate">Select a date:</label> -->
-                        <input type="date" id="eventDate" name="eventDate">
+                        <input type="datetime-local" id="dateInput">
                     </div>
                     <div class="end_data">
-                        <input type="datetime-local">
-                    </div>
+                        <input type="datetime-local" placeholder="Your Custom Placeholder">
+                    </div>                    
                 </div>
             </div>
             <div class="search_btn flex br">
