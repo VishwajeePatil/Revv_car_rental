@@ -102,7 +102,47 @@ const second_slider = ()=>{
 }
 second_slider();
 // Offer Slider
+// why section Slider
+const why_section_slider = ()=>{
+    let y =0;
+    const scrollslider = (y)=>{
+        let btn_right = document.getElementById("why_rev_right");
+        let btn_left = document.getElementById("why_rev_left");
+        if(y<=-300){
+            btn_right.style.opacity=0.5;
+        }
+        else{
+            btn_right.style.opacity=1;
+        }
+        if(y>=0){
+            btn_left.style.opacity=0.5;
+        }
+        else{
+            btn_left.style.opacity=1;
+        }
+        gsap.to(".slider3 .why_rev_section",{
+            left:(y),
+            duration:1.2,
 
+        })
+    }
+    const manualscrollslide = ()=>{
+        document.getElementById("why_rev_right").addEventListener("click",()=>{
+            console.log("Second");
+            if(y>-300){
+                scrollslider(y-=395);
+            }
+        })
+        document.getElementById("why_rev_left").addEventListener("click",()=>{
+            if(y<0){
+                scrollslider(y+=395);
+            }
+        })
+    }
+    manualscrollslide()
+}
+why_section_slider();
+// why section Slider
 
 
 
