@@ -1,15 +1,21 @@
-let menubtn = document.getElementById("menu_btn")
+const menu_submenu = ()=>{
+    let menubtn = document.getElementById("menu_btn")
 menubtn.addEventListener("click",()=>{
     opnsdmenu(true);
 })
+
 let menuclosebtn = document.getElementById("menu_close_btn")
 menuclosebtn.addEventListener("click",()=>{
     opnsdmenu(false);
 })
+
 const opnsdmenu = (flag)=>{
     let sidemenu = document.getElementById("side_menu")
     sidemenu.className = flag ? "active" : ""
 }
+
+}
+menu_submenu()
 let x = 0
 const scrollslider = (x)=>{
     if(x<=-1020){
@@ -241,6 +247,7 @@ const add_city = ()=>{
         "Guwahati"
       ];
       let select = document.querySelector("#select #city");
+      const selected_city = document.getElementById("selected_city").innerText=top50CitiesInIndia[0]
       top50CitiesInIndia.map((item)=>{
         let opt = document.createElement("option");
         opt.value=item
@@ -251,19 +258,24 @@ const add_city = ()=>{
 }
 add_city();
 const rental_box_change = ()=>{
-    const change_rental_box = (flag)=>{
-
-    }
     const subs_header = document.getElementById("subs_header")
     const rental_header = document.getElementById("rental_header")
     const cale_box = document.querySelector("#rental_box .selection_box .calendor")
     const select = document.querySelector("#rental_box .selection_box select")
+    const rental_logo_img = document.getElementById("rental_logo_img")
+    const inp = document.querySelector("#rental_box .selection_box select")
+    const selected_city = document.getElementById("selected_city")
+    inp.addEventListener("change",()=>{
+        selected_city.innerText=inp.value
+
+    })
     subs_header.addEventListener("click",()=>{
         subs_header.classList="active"
         rental_header.classList=null
         cale_box.style.display="none"
         select.style.borderRadius = "10px";
         select.style.marginTop="40px"
+        rental_logo_img.src="./Assets/subscription_web.png"
     })
     rental_header.addEventListener("click",()=>{
         rental_header.classList="active"
@@ -271,6 +283,17 @@ const rental_box_change = ()=>{
         cale_box.style.display="flex"
         select.style.borderRadius = "10px 10px 0 0";
         select.style.marginTop="0"
+        rental_logo_img.src="./Assets/asset 9.svg"
+
     })
 }
 rental_box_change();
+
+
+
+
+// Practice
+document.addEventListener("scroll",(proms)=>{
+    var scrollLength = window.scrollY || document.documentElement.scrollTop;
+    console.log(scrollLength);
+})
