@@ -246,15 +246,17 @@ const add_city = ()=>{
         "Guntur",
         "Guwahati"
       ];
-      let select = document.querySelector("#select #city");
+      let select = document.querySelectorAll("#city");
       const selected_city = document.getElementById("selected_city").innerText=top50CitiesInIndia[0]
-      top50CitiesInIndia.map((item)=>{
-        let opt = document.createElement("option");
-        opt.value=item
-        opt.text=item
-        select.appendChild(opt)
+      console.log(select);
+      select.forEach((ppp)=>{
+        top50CitiesInIndia.map((item)=>{
+            let opt = document.createElement("option");
+            opt.value=item
+            opt.text=item
+            ppp.appendChild(opt)
+          })
       })
-      
 }
 add_city();
 const rental_box_change = ()=>{
@@ -291,9 +293,27 @@ rental_box_change();
 
 
 
-
+const nav2_display = ()=>{
+    let nav = document.getElementById("nav2");
+    document.addEventListener("scroll",()=>{
+        var scrollLength = window.scrollY || document.documentElement.scrollTop;
+        // nav.style.top = scrollLength>=550 ? "60px" : "0"
+        if(scrollLength>=510){
+            gsap.to("#nav2",{
+                top:60,
+                duration:0.5,
+                delay:0,
+            })
+        }
+        else{
+            gsap.to("#nav2",{
+                top:0,
+                duration:0.5,
+                delay:0,
+                ease: "power2.out"
+            })
+        }
+    })
+}
+nav2_display()
 // Practice
-document.addEventListener("scroll",(proms)=>{
-    var scrollLength = window.scrollY || document.documentElement.scrollTop;
-    console.log(scrollLength);
-})
