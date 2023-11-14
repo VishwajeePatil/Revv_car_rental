@@ -24,4 +24,20 @@
     #nav > div{
         width: 100%;
     }
+    #nav2{
+        display: none;
+    }
+    #rental_box{
+        top: 30%;
+        left: 25%;
+        height: 100%;
+        /* width: 100%; */
+        background-color: #ffffff;
+        transform: translate(-50%,-50%);
+        border-radius: 14px;
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+        /* width: 530px; */
+        padding: 10px 20px 0;
+        scale: 0.65;
+    }
 }
